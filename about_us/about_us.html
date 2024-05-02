@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="about_us.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+
+
+
+
+
+
+
+
+
     <!--  member board -->
     <div class="member_board hide">
         <!-- whole board -->
@@ -62,16 +72,29 @@
                         <a href="/homepage.html"><img src="/images/Homepagelogo.png" alt="logo" width="125px"></a>
                     </div>
                     <nav>
-                        <ul id="MenuItems">
-                            <li><a href="/homepage.html">Home</a></li>
-                            <li><a href="">Products</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="/login.html">Login/Register</a></li>
-                            <li><a href="">Account</a></li>
-                        </ul>
+                        <div class="Menu-Items">
+                            <div class="icon">
+                                <i class='bx bx-menu bx-flip-horizontal' onclick="show()"></i>
+                                
+
+                            </div>
+                            <div class="inf hide_menu">
+                            <div class="items ">
+                                <a href="/homepage.html">Home</a>
+                                <a href="">Products</a>
+                                <a href="">About</a>
+                                <a href="/login.html">Login/Register</a>
+                                <a href="">Account</a>
+                                <i class='bx bx-x' onclick="closeMenu()"></i>
+                            </div>
+                        </div>
+                        
+
+
+                        </div>
                     </nav>
-                    <a href="/cart.html"><img src="/images/cart.png" width="30px" height="30px"></a>
-                    <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()">
+                    <!-- <a href="/cart.html"><img src="/images/cart.png" width="30px" height="30px"></a> -->
+                    <!-- <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()"> -->
                 </div>
             </div>
     </header>
@@ -167,7 +190,31 @@
     </footer>
     </div>
 
-    <script>// Initial variable declarations
+    <script>
+        // //Show Menu
+        let menu_icon = document.querySelector('.icon i');
+        let nav_bar = document.querySelector('.inf');
+        let close_nav = document.querySelector('.items i');
+
+        // menu_icon.classList.add('show')
+
+        function show(){
+            nav_bar.classList.remove('hide_menu');
+        }
+        function closeMenu(){
+            nav_bar.classList.add('hide_menu')
+        }
+
+
+
+
+
+
+
+
+
+
+        // Initial variable declarations
         let btn_close = document.querySelector('button');
         let wrapper_info = document.querySelector('.member_board');
 
@@ -202,7 +249,9 @@
             console.log(e.target);
             hideAllMemberInfoPanels(); // Hide all panels when close button is clicked
             wrapper_info.classList.remove("show");
-        });</script>
+        });
+        
+        </script>
 </body>
 
 </html>
