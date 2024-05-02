@@ -30,6 +30,13 @@ header h1 {
     display: none;
 }
 
+.icon i {
+    display: none;
+}
+
+.items i {
+    display: none;
+}
 .items a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
@@ -266,7 +273,7 @@ ul li {
 
 /* responsive */
 
-@media only screen and (max-width: 2500px) {
+@media only screen and (max-width: 840px) {
 
     /* accessibility */
     .hide_menu {
@@ -302,6 +309,7 @@ ul li {
 
     .icon i {
         cursor: pointer;
+        display: block;
     }
 
     /* Items */
@@ -324,6 +332,7 @@ ul li {
         text-align: left;
         font-size: 40px;
         cursor: pointer;
+        display: block;
     }
 
     .items i:hover {
@@ -383,5 +392,18 @@ ul li {
         border: 1px solid white;
         box-shadow: 0 4px 8px rgba(97, 97, 97, 2.8);
         color: white;
+    }
+
+
+
+    /* member */
+    .member div> img{
+        align-self: center;
+    }
+
+    .member div> div{
+        align-self: center;
+        text-align: center;
+        margin-top: 20px;
     }
 }
