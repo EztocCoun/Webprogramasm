@@ -38,9 +38,21 @@
 
         <fieldset>
             <legend>Preferred Contact Method:</legend>
-            <label><input type="radio" name="contactMethod" value="email" required>Email</label>
-            <label><input type="radio" name="contactMethod" value="phone">Phone</label>
+            <label class="label"><input type="radio" name="contactMethod" value="email" required>Email</label>
+            <label class="label"><input type="radio" name="contactMethod" value="phone">Phone</label>
         </fieldset>
+
+        <fieldset>
+            <legend>Contact Days (choose at least one):</legend>
+            <label class="label"><input type="checkbox" name="contactDays" value="monday">Monday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="tuesday">Tuesday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="wednesday">Wednesday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="thursday">Thursday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="friday">Friday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="saturday">Saturday</label>
+            <label class="label"><input type="checkbox" name="contactDays" value="sunday">Sunday</label>
+        </fieldset>
+
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" required minlength="50" maxlength="500" placeholder="Type your request"></textarea>

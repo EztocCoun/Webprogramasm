@@ -65,4 +65,18 @@ button:hover {
     opacity: 0.9;
 }
 
- 
+.label {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+ }
+
+
+*::placeholder {
+    color: #888; 
+    font-style: italic; 
+}
