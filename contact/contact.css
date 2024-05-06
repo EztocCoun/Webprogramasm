@@ -58,6 +58,7 @@ button {
 
 button[type="reset"] {
     background-color: #6c757d;
+    
    
 }
 
@@ -79,4 +80,25 @@ button:hover {
 *::placeholder {
     color: #888; 
     font-style: italic; 
+}
+
+
+/* For Tablet */
+@media (max-width: 1199px) and (min-width: 768px) {
+    form {
+        width: 80%; 
+    }
+}
+
+/* For Smart Phone */
+@media (max-width: 767px) {
+    form {
+        width: 95%; 
+        padding: 10px; 
+    }
+
+    label, input, select, textarea, button {
+        width: 90%; 
+        margin: 20px;
+    }
 }
