@@ -11,14 +11,14 @@ body {
     min-height: 100vh;
     flex-direction: column;
     display: flex;
-    background-color: #f3f3f3; /* Màu nền nhẹ cho trang */
+    background-color: #f3f3f3; 
     font-family: Arial, sans-serif;
 }
 
 header, footer {
     text-align: center;
     padding: 15px;
-    background-color: orange; /* Màu xanh nổi bật cho header và footer */
+    background-color: orange; 
     color: white;
     width: 100%;
 }
@@ -32,7 +32,7 @@ header, footer {
     flex: 0 0 200px;
     background-color: #FFF;
     padding: 20px;
-    border-right: 1px solid #ddd; /* Phân cách sidebar với nội dung chính */
+    border-right: 1px solid #ddd; 
 }
 
 .content {
