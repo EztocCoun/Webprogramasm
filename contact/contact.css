@@ -3,14 +3,14 @@ body {
     background-color: white;
 }
 
-header {
+header, h1 {
     background-color: orange;
-    padding: 10px;
+    padding: 15px;
     margin: auto;
     text-align: center;
     color: white;
-    width: 85%;
-    border-radius: 15px;
+    width: 100%;
+   
 }
 
 footer {
@@ -90,6 +90,8 @@ button:hover {
     }
 }
 
+
+
 /* For Smart Phone */
 @media (max-width: 767px) {
     form {
@@ -101,4 +103,44 @@ button:hover {
         width: 90%; 
         margin: 20px;
     }
+}
+
+
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #FFF;
+    padding: 20px;
+    border-right: 1px solid #ddd; /* Phân cách sidebar với nội dung chính */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+.menu  {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a,  li a {
+    display: block;
+    padding: 10px;
+    color: orange; 
+    text-decoration: none;
+    border-bottom: 1px solid #eee; 
+}
+
+.menu li a:hover,  li a:hover {
+    background-color: #f0f0f0; 
+    color: #0056b3; 
 }

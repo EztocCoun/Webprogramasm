@@ -8,66 +8,83 @@
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Help Center</h1>
     </header>
 
-    <!-- FORM -->
-    <form id="contactForm">
+       <!-- sidebar  -->
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li ><a href="../Copyright, ToS, and Privacy Policy/copyright.html">Legal Information</a></li>
+                <li ><a href="../Fees/fees.html">Fees</a></li>
+                <li style="background-color: grey;"><strong><a href="../contact/contact.html">Contact</a></strong></li>
+                <li><a href="../about_us/about_us.html">About Us</a></li>
+            </ul>
+        </aside>
 
-        <label for="user">Do you need help as a vendor or client?</label>
-        <select id="user" name="user" >
-            <option value="client">Client (shopper)</option>
-            <option value="vendor">Vendor (shop owner)</option>
-        </select>
+        <div class="content">
+            =    <ul class="terms-list">
+                <!-- List of links as previously defined -->
+            </ul>
+        </div>
+        <!-- FORM -->
+        <form id="contactForm">
+            <h2>Contact form</h2>
 
-        <label for="purpose">Contact Purpose:</label>
-        <select id="purpose" name="purpose">
-            <option value="query">Return & Refund</option>
-            <option value="query">Account & Security</option>
-            <option value="query">Content & Legality</option>
-            <option value="query">Purchase</option>
-            <option value="query">Vouchers & Promotions</option>
-            <option value="query">General Questions</option>
-            <option value="feedback">Feedback</option>
-            <option value="complaint">Complaint</option>
-        </select>
+            <label for="user">Do you need help as a vendor or client?</label>
+            <select id="user" name="user" >
+                <option value="client">Client (shopper)</option>
+                <option value="vendor">Vendor (shop owner)</option>
+            </select>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required minlength="2" placeholder="Type your full name here">
+            <label for="purpose">Contact Purpose:</label>
+            <select id="purpose" name="purpose">
+                <option value="query">Return & Refund</option>
+                <option value="query">Account & Security</option>
+                <option value="query">Content & Legality</option>
+                <option value="query">Purchase</option>
+                <option value="query">Vouchers & Promotions</option>
+                <option value="query">General Questions</option>
+                <option value="feedback">Feedback</option>
+                <option value="complaint">Complaint</option>
+            </select>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Type your personal email here">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="2" placeholder="Type your full name here">
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" required placeholder="Type your personal phone number here">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Type your personal email here">
 
-        <fieldset>
-            <legend>Preferred Contact Method:</legend>
-            <label class="label"><input type="radio" name="contactMethod" value="email" required>Email</label>
-            <label class="label"><input type="radio" name="contactMethod" value="phone">Phone</label>
-        </fieldset>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" required placeholder="Type your personal phone number here">
 
-        <fieldset>
-            <legend>Contact Days (choose at least one):</legend>
-            <label class="label"><input type="checkbox" name="contactDays" value="monday">Monday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="tuesday">Tuesday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="wednesday">Wednesday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="thursday">Thursday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="friday">Friday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="saturday">Saturday</label>
-            <label class="label"><input type="checkbox" name="contactDays" value="sunday">Sunday</label>
-        </fieldset>
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <label class="label"><input type="radio" name="contactMethod" value="email" required>Email</label>
+                <label class="label"><input type="radio" name="contactMethod" value="phone">Phone</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Days (choose at least one):</legend>
+                <label class="label"><input type="checkbox" name="contactDays" value="monday">Monday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="tuesday">Tuesday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="wednesday">Wednesday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="thursday">Thursday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="friday">Friday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="saturday">Saturday</label>
+                <label class="label"><input type="checkbox" name="contactDays" value="sunday">Sunday</label>
+            </fieldset>
 
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required minlength="50" maxlength="500" placeholder="Type your request"></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required minlength="50" maxlength="500" placeholder="Type your request"></textarea>
 
-        <button type="reset">Clear</button>
-        <button type="submit">Send</button>
-    </form>
-
+            <button type="reset">Clear</button>
+            <button type="submit">Send</button>
+        </form>
+    </div>
     <footer>
-        <p></p>
+        <p>Copyright © 2024</p>
     </footer>
 </body>
 </html>

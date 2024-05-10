@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     display: flex;
     background-color: #f3f3f3; /* Màu nền nhẹ cho trang */
+    font-family: Arial, sans-serif;
 }
 
 header, footer {
