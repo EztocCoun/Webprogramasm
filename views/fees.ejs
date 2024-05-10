@@ -1,0 +1,46 @@
+
+    <link rel="stylesheet" href="/css/fees.css">
+
+
+<body>
+    <%- include('partials/header')%>
+    <%- include('partials/nav')%>
+
+    <table id="feesTable">
+        <thead>
+            <tr>
+                <th>Fee Type</th>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monthly Rent</td>
+                <td>Fee for store space rental per month.</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>Commission Fee</td>
+                <td>Percentage taken by the platform on each sale.</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Premium Membership Fee</td>
+                <td>Monthly fee for premium services like featured listings.</td>
+                <td>$10</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="contact-message">
+        Feel free to <a href="http://127.0.0.1:5500/Webprogramasm/contact/contact.html">Contact</a> us if you have any
+        questions.
+    </div>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+</body>
+
+</html>

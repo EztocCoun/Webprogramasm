@@ -1,0 +1,54 @@
+    <link rel="stylesheet" href="/css/contact.css">
+
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <!-- FORM -->
+    <form id="contactForm">
+
+        <label for="user">Do you need help as a vendor or client?</label>
+        <select id="user" name="user">
+            <option value="client">Client (shopper)</option>
+            <option value="vendor">Vendor (shop owner)</option>
+        </select>
+
+        <label for="purpose">Contact Purpose:</label>
+        <select id="purpose" name="purpose">
+            <option value="query">General Query</option>
+            <option value="feedback">Feedback</option>
+            <option value="complaint">Complaint</option>
+        </select>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="2" placeholder="Type your full name here">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Type your personal email here">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" required
+            placeholder="Type your personal phone number here">
+
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+            <label><input type="radio" name="contactMethod" value="email" required>Email</label>
+            <label><input type="radio" name="contactMethod" value="phone">Phone</label>
+        </fieldset>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="50" maxlength="500"
+            placeholder="Type your request"></textarea>
+
+        <button type="reset">Clear</button>
+        <button type="submit">Send</button>
+    </form>
+
+    <footer>
+        <%- include('partials/footer')%>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/login.css">
+
+<%- include('partials/header') %> <%- include('partials/nav') %>
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form id="LoginForm">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <Button type="submit" class="btn">Login</Button>
+                                <a href="">Forgot Password</a>
+                            </form>
+
+                            <form id="RegForm">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <select>
+                                    <option>Select your purpose</option>
+                                    <option>Vendor</option>
+                                    <option>Customer</option>
+                                    <option>Shipper</option>
+                                </select>
+                                <Button type="submit" class="btn">Register</Button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+
+
+        <!--- js for toggle-->
+        <script src="/js/login.js"></script>
+        </body>
+
+        </html>

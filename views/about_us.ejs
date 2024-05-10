@@ -1,0 +1,138 @@
+
+    <link rel="stylesheet" href="/css/about_us.css">
+
+    <%- include('partials/header') %> 
+<body>
+    <%- include('partials/nav') %>
+    <!--  member board -->
+    <div class="member_board hide">
+        <!-- whole board -->
+        <div class="member_inner">
+            <!-- each member board -->
+            <div class="Nhan_board">
+                <h2>My name is Nguyen Trong Nhan aka Steven</h2>
+                <span>----------------------</span>
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita amet suscipit nulla magni,
+                    enim, ipsam aliquid delectus necessitatibus officia sit accusantium natus labore, neque error
+                    harum aspernatur alias? Ex, corporis.</h3>
+            </div>
+
+            <div class="Duy_board">
+                <h2>My name is Nguyen Vo Duy</h2>
+                <span>----------------------</span>
+                <h3>My information</h3>
+            </div>
+
+            <div class="Khang_board">
+                <h2>My name is Nguyen Huynh Gia Khang</h2>
+                <span>----------------------</span>
+                <h3>My information</h3>
+            </div>
+
+            <div class="Thinh_board">
+                <h2>My name is Lu Duc Thinh</h2>
+                <span>----------------------</span>
+                <h3>My information</h3>
+            </div>
+
+            <!-- board footer -->
+            <div class="board_footer">
+                <button>Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- body -->
+    <main>
+        <!-- title of the mall -->
+        <div class="mall_info">
+            <h3>
+                Welcome to our online mall, where the world is your marketplace! Our virtual shopping destination
+                caters to a diverse community of store owners and shoppers, offering a seamless platform for selling
+                and buying products from around the globe.</h3>
+        </div>
+
+
+        <!-- member_img -->
+        <div class="member">
+
+
+            <div class="Nhan">
+                <img src="/about_us/portrait img/portrait-photography_P6b_379x392.avif" alt="Nhan" id="Nhan_img">
+                <div class="member_Nhan">
+                    <h2>Nguyen Trong Nhan</h2>
+                    <p>Click Image for more</p>
+                </div>
+
+            </div>
+            <div class="Duy">
+                <img src="/about_us/portrait img/portrait-photography_P6b_379x392.avif" alt="Duy" id="Duy_img">
+                <div class="member_Duy">
+                    <h2>Nguyen Vu Duy</h2>
+                    <p>Click Image for more</p>
+                </div>
+            </div>
+            <div class="Khang">
+                <img src="/about_us/portrait img/portrait-photography_P6b_379x392.avif" alt="Khang" id="Khang_img">
+                <div class="member_Khang">
+                    <h2>Nguyen Huynh Gia Khang</h2>
+                    <p>Click Image for more</p>
+                </div>
+            </div>
+            <div class="Thinh">
+                <img src="/about_us/portrait img/portrait-photography_P6b_379x392.avif" alt="Thinh" id="Thinh_img">
+                <div class="member_Thinh">
+                    <h2>Lu Duc Thinh</h2>
+                    <p>Click Image for more</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    
+    <%- include('partials/footer') %>  
+    
+    <script>
+        // Initial variable declarations
+        let btn_close = document.querySelector('button');
+        let wrapper_info = document.querySelector('.member_board');
+
+        // Function to hide all member info panels
+        function hideAllMemberInfoPanels() {
+            // Select all the member info panels
+            let member_info_panels = document.querySelectorAll('.member_board > .member_inner > div');
+            member_info_panels.forEach(panel => {
+                panel.classList.remove("show");
+                panel.classList.add("hide");
+                setTimeout(function () {
+                    panel.classList.remove("hide");
+                }, 1000);
+            });
+        }
+
+        // Event listener for each member's image click
+        document.querySelectorAll('.member img').forEach(img => {
+            img.addEventListener('click', function (e) {
+                hideAllMemberInfoPanels(); // Hide all panels first
+
+                let memberClass = e.target.alt + '_board'; // Construct the class name from the image alt attribute
+                let memberInfoPanel = document.querySelector('.' + memberClass);
+
+                wrapper_info.classList.add("show");
+                memberInfoPanel.classList.add("show");
+            });
+        });
+
+        // Event listener for the close button
+        btn_close.addEventListener('click', function toggleClose(e) {
+            console.log(e.target);
+            hideAllMemberInfoPanels(); // Hide all panels when close button is clicked
+            wrapper_info.classList.remove("show");
+        });
+
+    </script>
+</body>
+
+</html>
