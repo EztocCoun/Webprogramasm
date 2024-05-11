@@ -1,4 +1,4 @@
-/* Resetting default styles for all elements */
+Resetting default styles for all elements
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@
 }
 
 /* Styling for the header section */
-header {
+/* header {
     background-color: var(--primary-color);
     padding: 20px 0;
     border-bottom: 1px solid black;
@@ -68,26 +68,16 @@ nav ul li {
 a {
     text-decoration: none;
     color: #555;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    color: #555;
-}
-
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+} */
+main{
+    background: radial-gradient(#fff,orange);
+    padding-bottom: 20px;
 }
 
 .mall_info {
     text-align: center;
     padding: 30px;
+    color: white;
 }
 
 /* Styling for the member list */
@@ -96,7 +86,9 @@ p {
     flex-direction: column;
     margin: 50px 85px;
     padding: 90px;
-    border: 1px solid black;
+    border: 1px solid rgb(145, 145, 145);
+    background: radial-gradient(white, rgb(190, 211, 216));
+    border-radius: 20px;
 }
 
 /* Styling for member images */
@@ -107,6 +99,7 @@ p {
     margin-right: 20px;
     cursor: pointer;
     border: 1px solid black;
+    border-radius: 50%;
 }
 
 
@@ -114,6 +107,7 @@ p {
 .member_board {
     display: none;
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -211,65 +205,7 @@ p {
 
 
 
-.footer {
-    background-color: #000;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
-}
 
-.footer p {
-    color: #8a8a8a;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.footer h3 {
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.footer-col-1,
-.footer-col-2,
-.footer-col-3,
-.footer-col-4 {
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer-col-1 {
-    flex-basis: 30%;
-    margin-left: 30px;
-}
-
-.footer-col-2 {
-    flex: 1;
-    text-align: center;
-}
-
-.footer-col-2 img {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-.footer-col-3,
-.footer-col-4 {
-    flex-basis: 12%;
-    text-align: center;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-.copyright {
-    text-align: center;
-}
 
 /* responsive */
 
@@ -284,74 +220,7 @@ ul li {
         position: relative;
     }
 
-    /* menu Items */
-    .Menu-Items {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .Menu-Items .icon i {
-        width: 50px;
-        height: 50px;
-        font-size: 60px;
-        cursor: pointer;
-        right: 0;
-    }
-
-
-    .icon {
-        position: absolute;
-        top: 40px;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    .icon i {
-        cursor: pointer;
-        display: block;
-    }
-
-    /* Items */
-    .inf{
-        width: 200px;
-        height: auto;
-    }
-
-    .items {
-        width: 200px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        background: rgba(97, 97, 97, 1.6);
-    }
-
-    .items i {
-        color: white;
-        margin-top: 30px;
-        text-align: left;
-        font-size: 40px;
-        cursor: pointer;
-        display: block;
-    }
-
-    .items i:hover {
-        border: 1px solid rgb(252, 166, 166);
-        background: red;
-
-    }
-
-    .items a {
-        transform: translateY(50%);
-        width: auto;
-        height: 50px;
-        transition: 0.9s ease-in;
-        color: white;
-    }
-
-
-
-
+   
 
     /* member */
     .member div {
@@ -363,6 +232,7 @@ ul li {
         width: 500px;
         height: 470px;
         position: relative;
+        max-width: 840px;
     }
 
     .member_inner div {
@@ -370,6 +240,7 @@ ul li {
         height: 400px;
         top: 20%;
         left: 0;
+        max-width: 840px;
     }
 
     .board_footer button {
