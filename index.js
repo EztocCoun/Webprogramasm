@@ -22,11 +22,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res, next) => {
-    res.json("hi");
+    res.redirect("login");
 });
 
 app.get('/login', (req, res, next) => {
     res.render('login');
+});
+app.get('/home_page', (req, res, next) => {
+    res.render('home_page');
 });
 
 app.get('/about_us', (req, res, next) => {
@@ -45,43 +48,49 @@ app.get('/cart', (req, res) => {
     res.render('cart');
 });
 
-// Register user
-app.post('/register', (req, res) => {
-    const { username, password } = req.body;
-
-    AccountModel.findOne({ username: username })
-        .then(user => {
-            if (user) {
-                return res.status(409).json('Username already exists');
-            }
-            return AccountModel.create({ username, password });
-        })
-        .then(user => {
-            res.json('User created successfully');
-        })
-        .catch(err => {
-            console.error('Error during registration:', err);
-            res.status(500).json('Registration failed');
-        });
-});
+app.get('/register', (req, res) => res.render('login'));
 
 // User login
+// Handle Login
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-
     AccountModel.findOne({ username: username, password: password })
         .then(user => {
             if (user) {
-                res.json('Login successful');
+                res.send('success');  // Plain text response
             } else {
-                res.status(400).json('Incorrect username or password');
+                res.send('Incorrect password');  // Plain text response
             }
         })
         .catch(err => {
             console.error('Error during login:', err);
-            res.status(500).json('Server error');
+            res.status(500).send('Server error');  // Plain text response
         });
 });
+
+// Handle Registration
+app.post('/register', (req, res) => {
+    const { username, email, password, purpose } = req.body;
+    AccountModel.findOne({ username: username, email: email })
+        .then(user => {
+            if (user) {
+                res.send('Username already exists');  // Plain text response
+            } else {
+                return AccountModel.create({ username, email, password, purpose });
+            }
+        })
+        .then(newUser => {
+            if (newUser) {
+                res.send('Registration successful');  // Plain text response
+            }
+        })
+        .catch(err => {
+            console.error('Error during registration:', err);
+            res.status(500).send('Registration failed');  // Plain text response
+        });
+});
+
+
 
 // Start server
 app.listen(port, () => {
