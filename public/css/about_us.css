@@ -1,4 +1,4 @@
-
+Resetting default styles for all elements
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +26,7 @@ header h1 {
     font-size: 30px;
 }
 
-.Menu-Items span {
-    display: none;
-}
+
 
 .icon i {
     display: none;
@@ -72,6 +70,24 @@ a {
 main{
     background: radial-gradient(#fff,orange);
     padding-bottom: 20px;
+}
+
+.Menu-Items span {
+    display: none;
+}
+
+.icon i {
+    display: none;
+}
+
+.items i {
+    display: none;
+}
+.items a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 15px;
 }
 
 .mall_info {
@@ -275,6 +291,5 @@ main{
     .member div> div{
         align-self: center;
         text-align: center;
-        margin-top: 20px;
     }
 }

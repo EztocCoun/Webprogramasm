@@ -1,59 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 
-<link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
 
-
-<%- include('partials/header')%>
-    <%- include('partials/nav')%>
-
-        <div class="account-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="/images/img1.png" width="100%">
-                    </div>
-                    <div class="col-2">
-                        <div class="form-container">
-                            <div class="form-btn">
-                                <span onclick="register()">Register</span>
-                                <span onclick="login()">Login</span>
-                                <hr id="Indicator">
-                            </div>
-
-                            <form action="/login"  method="post" id="RegForm" onsubmit="handleLogin(event)">
-                                <input type="text" placeholder="Username">
-                                <input type="password" placeholder="Password">
-                                <Button type="submit" class="btn">Login</Button>
-                                <a href="">Forgot Password</a>
-                            </form>
-
-                            <form action="/register"  method="post" id="LoginForm" onsubmit="handleRegister(event)">
-                                <input type="text" placeholder="Username">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
-                                <select>
-                                    <option>Select your purpose</option>
-                                    <option>Vendor</option>
-                                    <option>Customer</option>
-                                    <option>Shipper</option>
-                                </select>
-                                <Button type="submit" class="btn">Register</Button>
-                                
-                            </form>
-
-
-
-                           
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <%- include('partials/footer') %>
-
-
-            <!--- js for toggle-->
-            <script src="/js/login.js"></script>
-            </body>
-
-            </html>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p>Don't have an account? <a class="link" href="/signup">    SignUp</a></p>
+      </div>
+    
+</body>
+</html>

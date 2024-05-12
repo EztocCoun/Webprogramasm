@@ -1,359 +1,73 @@
-
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    height: auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.row{
+body {
+    height: 100vh;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.col-2{
-    flex-basis: 50%;
-    min-width: 300px;
-}
 
-.col-2 img{
-    max-width: 100%;
-    padding: 50px 0;
-    background-image: url('/images/cart.png');
-}
-
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
-}
-
-.btn{
-    display: inline-block;
-    background-color: orange;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: background-color 0.5s;
-}
-
-.btn:hover{
-    background-color: #563434;
-}
-
-/* .header{
-    background: radial-gradient(#fff,orange);
-    margin: 30px 50px 0 50px;
-    border: #000 solid;
-}
-
-.header .row{
-    margin-top: 70px;
-} */
-
-.categories{
-    margin: 70px 0;
-}
-
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
+h2 {
+    text-align: center;
     margin-bottom: 30px;
-}
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
 
-.col-3 img{
-    width: 100%;
-}
-
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-
-.categories{
-    margin: 70px 0;
-}
-
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-
-.col-3 img{
-    width: 50%;
-    align-items: center;
-}
-
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.col-4{
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s ease;
-}
-
-.col-4 img{
-    width: 100%;
-}
-
-.title{
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
-
-.title::after{
-    content: '';
-    background-color: red;
+.form-container {
     width: 300px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-h4{
-    color: #555;
-    font-weight: normal;
-}
-
-.col-4 p{
-    font-size: 14px;
-}
-
-.rating .fa-solid{
-    color: black;
-}
-
-.rating .fa-regular{
-    color: black;
-}
-
-.col-4:hover{
-    transform: translateY(-5px);
-}
-
-.offer{
-    background: radial-gradient(#fff,orange);
-    margin-top: 80px;
-    padding: 30px 0;
-}
-
-.col-2 .offer-img{
-    padding: 50px;
-}
-
-.small{
-    color: #555;
-}
-
-.testimonial{
-    padding-top: 100px;
-}
-
-.testimonial .col-3{
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-}
-
-.testimonial .col-3 img{
-    width: 50px;
-    margin-top: 20px;
-    border-radius: 50%;
-}
-
-.testimonial .col-3:hover{
-    transform: translateY(-10px);
-}
-
-.fa-solid.fa-quote-left{
-    font-size: 34px;
-    color: black;
-}
-
-.col-4 img{
-    max-width: 200px;
-    max-height: 280px;
-    min-width: 199px;
-    min-height: 279px;
-}
-
-.col-3 p{
-    font-size: 12px;
-    margin: 12px 0;
-    color: #777;
-}
-
-.testimonial .col-3 h3{
-    font-weight: 600;
-    color: #555;
-    font-size: 16px;
-}
-
-.brands{
-    margin: 100px auto;
-}
-
-.col-5{
-    width: 160px;
-}
-
-.col-5 img{
-    width: 100%;
-    cursor: pointer;
-    filter: grayscale(100%);
-}
-
-.col-5 img:hover{
-    filter: grayscale(0);
-}
-
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display: none;
-}
-
-.btn{
-    display: inline-block;
-    background-color: orange;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: background-color 0.5s;
-}
-
-.btn:hover{
-    background-color: #563434;
-}
-
-
-
-.account-page{
-    padding: 50px 0;
-    height: 500px;
-    background: radial-gradient(#fff,orange);
-}
-
-.form-container{
-    background-color: #fff;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    text-align: center;
-    padding: 20px 0;
-    margin: auto;
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.form-container span{
-    font-weight: bold;
-    padding: 0 10px;
-    color: #555;
-    cursor: pointer;
-    width: 100px;
-    display: inline-block;
-}
-
-.form-btn{
-    display: inline-block;
-}
-
-.form-container form{
-    max-width: 300px;
-    padding: 0 20px;
-    position: absolute;
-    top: 130px;
-    transition: transform 1s ease;
-}
-
-form input{
-    width: 100%;
-    height: 30px;
-    margin: 10px 0;
-    padding: 0 10px;
+    margin: 0 auto;
+    padding: 20px;
     border: 1px solid #ccc;
-}
+    border-radius: 15px;
+  }
 
-form .btn{
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
     width: 100%;
-    border: none;
-    cursor: pointer;
-    margin: 10px 0;
-}
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
 
-form .btn:focus{
-    outline: none;
-}
-
-#LoginForm{
-    left: -300px;
-}
-
-#RegForm{
-    left: 0;
-}
-
-form a{
-    font-size: 12px;
-}
-
-#Indicator{
-    width: 100px;
-    border: none;
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
     background-color: orange;
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(100px);
-    transition: transform 1s ease;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #563434;
+  }
+
+.link {
+  color: orange;
+  text-decoration: none;
 }
 
-
-@media only screen and (max-width: 800px){
-
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
+.link:hover{
+  color: #563434;
+  text-decoration: underline;
 }
+  p {
+    margin-top: 15px;
+  }
