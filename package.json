@@ -1,0 +1,31 @@
+{
+
+  "name": "project-fullstack",
+  "version": "1.0.0",
+  "description": "fullstack project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steven29122004/Fullstack-Web-Application.git"
+  },
+  "keywords": [
+    "fullstack"
+  ],
+  "author": "Nhan, Duy, Khang, Thinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steven29122004/Fullstack-Web-Application/issues"
+  },
+  "homepage": "https://github.com/steven29122004/Fullstack-Web-Application#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "express.js": "^1.0.0",
+    "mongoose": "^7.4.1"
+  }
+}
