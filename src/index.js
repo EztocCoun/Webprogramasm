@@ -28,6 +28,9 @@ app.get("/login", (req, res) => {
 app.get('/copyright', (req, res, next) => {
     res.render('copyright');
 });
+app.get('/contact', (req, res, next) => {
+    res.render('contact');
+});
 app.get('/detail', (req, res, next) => {
     res.render('detail');
 });
@@ -71,11 +74,12 @@ app.post("/signup", async (req, res) => {
         // Hash the password using bcrypt
         const saltRounds = 10; // Number of salt rounds for bcrypt
         const hashedPassword = await bcrypt.hash(data.password, saltRounds);
-
+        
         data.password = hashedPassword; // Replace the original password with the hashed one
-
+        
         const userdata = await collection.insertMany(data);
-        console.log(userdata);
+        res.render("login");
+        // console.log(userdata);
     }
 
 });

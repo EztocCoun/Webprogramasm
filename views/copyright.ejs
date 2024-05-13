@@ -10,9 +10,9 @@
     <aside class="sidebar">
         <ul class="menu">
             <li style="background-color: grey;"><a href="/copyright"><strong>Legal Information</strong></a></li>
-            <li><a href="/fees">Fees</a></li>
-            <li><a href="../contact/contact.html">Contact</a></li>
-            <li><a href="../about_us/about_us.html">About Us</a></li>
+            <li><a href="../fees">Fees</a></li>
+            <li><a href="../contact">Contact</a></li>
+            <li><a href="../about_us">About Us</a></li>
         </ul>
     </aside>
 
@@ -51,5 +51,17 @@
     </div>
 </div>
 <&- include('partials/footer')&>
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    });
+});
+</script>
 </body>
 </html>
