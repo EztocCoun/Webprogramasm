@@ -31,6 +31,9 @@ app.get('/copyright', (req, res, next) => {
 app.get('/detail', (req, res, next) => {
     res.render('detail');
 });
+app.get('/home', (req, res, next) => {
+    res.render('home');
+});
 
 app.get('/about_us', (req, res, next) => {
     res.render('about_us');
@@ -42,6 +45,9 @@ app.get('/fees', (req, res) => {
 
 app.get('/contact', (req, res) => {
     res.render('contact');
+});
+app.get('/shopping', (req, res) => {
+    res.render('shopping');
 });
 
 app.get('/cart', (req, res) => {
