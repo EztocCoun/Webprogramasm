@@ -23,6 +23,10 @@ app.get("/signup", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 });
+app.get("/copy", (req, res) => {
+    res.render("copy");
+});
+
 
 
 app.get('/copyright', (req, res, next) => {

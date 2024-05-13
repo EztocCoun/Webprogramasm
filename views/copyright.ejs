@@ -1,58 +1,150 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
     <link rel="stylesheet" href="/css/copyright.css">
+</head>
+<body>
+    <header>
+        <h1>Help Center</h1>
+    </header>
 
-    <%- include('partials/header')%>
-    <body>
-    <%- include('partials/nav')%>
-
-<!-- sidebar  -->
-<div class="main-container">
-    <aside class="sidebar">
-        <ul class="menu">
-            <li style="background-color: grey;"><a href="/copyright"><strong>Legal Information</strong></a></li>
-            <li><a href="../fees">Fees</a></li>
-            <li><a href="../contact">Contact</a></li>
-            <li><a href="../about_us">About Us</a></li>
-        </ul>
-    </aside>
-
-    <div class="content">
-        =    <ul class="terms-list">
-            <!-- List of links as previously defined -->
-        </ul>
-    </div>
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="../copyright">Legal Information</a></li>
+                <li><a href="../fees">Fees</a></li>
+                <li><a href="../contact">Contact</a></li>
+                <li><a href="../about_us">About Us</a></li>
+                <li style="background-color: grey;"><strong></strong><a href="../home">Home</a></strong></li>
+            </ul>
+        </aside>
     
+        <div class="content">
+            =    <ul class="terms-list">
+    
+            </ul>
+        </div>
+        <div class="faq-container">
+            <h1>Frequently Asked Questions</h1>
 
-    <div class="terms-container">
-        <h2> Legal Information</h2>
-        <ul class="terms-list">
-            <li><a href="tos.html">Terms of Service</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="operating-regulations.html">Operating Regulations</a></li>
-            <li><a href="product-posting.html">Regulations on Posting Products for Sale</a></li>
-            <li><a href="product-ban.html">Product Ban/Restriction Policy</a></li>
-            <li><a href="shipping-policy.html"> Shipping Policy</a></li>
-            <li><a href="return-policy.html">Return and Refund Policy</a></li>
-            <li><a href="display-services.html">Terms of Use Display Services</a></li>
-            <li><a href="mall-tos.html">Mall Terms of Service</a></li>
-            <li><a href="shipping-cost.html">Service to Reduce Shipping Costs</a></li>
-            <li><a href="dispute-resolution.html">Dispute Resolution/Complaint Handling Process</a></li>
-            <li><a href="ip-rights.html">Processes and Procedures for Coordinating Intellectual Property Rights Holders</a></li>
-            <li><a href="international-tos.html"> International Terms of Service</a></li>
-            <li><a href="outside-tos.html">Terms of Service Display outside  Platform</a></li>
-            <li><a href="spaylater.html">Terms and Conditions SPayLater Service for  Users</a></li>
-            <li><a href="seasy-loan.html">Terms and Conditions Seasy Loan Seller Service</a></li>
-            <li><a href="video-tos.html"> Video Terms of Service</a></li>
-            <li><a href="video-standards.html"> Video Community Standards</a></li>
-            <li><a href="anti-fraud.html">Anti-fraud Policy on  Platform and Handling Measures for Violating Sellers</a></li>
-            <li><a href="insurance-service.html">Insurance Service Terms and Conditions</a></li>
-            <li><a href="seasy-loan-consumer.html">Terms and Conditions of SEasy Consumer Loan Service</a></li>
-        </ul>
+            <div class="faq">
+                <button class="faq-question">What is your return policy?</button>
+                <div class="faq-answer">
+                    <p>We accept returns within 30 days of purchase. Please ensure that the product is in its original condition and packaging.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">How do I create an account on your mall?</button>
+                <div class="faq-answer">
+                    <p>To create an account, click on the 'Register' button at the top of the homepage. 
+                        Fill in the required fields in the form, including your email address, a password, and any other necessary information. After submitting the form, you'll receive a confirmation email. Follow the instructions in the email to complete your registration.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">Can I return or exchange an item I purchased?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can return or exchange items within 30 days of receipt. Items must be in their original condition and packaging.
+                         To initiate a return or exchange, please visit your account dashboard and select the order that contains the items you wish to return or exchange.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">What payment methods do you accept?</button>
+                <div class="faq-answer">
+                    <p>We accept a variety of payment methods including credit cards (Visa, MasterCard, American Express), PayPal, and online bank transfers. Specific options may vary depending on your location.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How can I track my order?</button>
+                <div class="faq-answer">
+                    <p>Once your order has shipped, you will receive a confirmation email that includes a tracking number. You can use this number on our website's tracking page to check the status of your delivery at any time.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">How do I apply a promo code to my order?</button>
+                <div class="faq-answer">
+                    <p>You can enter your promo code at checkout. There will be a box labeled "Promo Code" where you can enter the code before finalizing your purchase. Be sure to apply the promo code before completing your payment to benefit from the promotion.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">What should I do if I forgot my password?</button>
+                <div class="faq-answer">
+                    <p>If you've forgotten your password, click on the 'Forgot Password' link on the login page. Enter your email address, and we'll send you instructions to reset your password.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How do I update my shipping or billing address?</button>
+                <div class="faq-answer">
+                    <p>You can update your shipping or billing address by going to your account settings. Click on 'Addresses' and you will be able to edit or add new addresses.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">Do you ship internationally?</button>
+                <div class="faq-answer">
+                    <p>Yes, we offer international shipping. Shipping costs and times vary depending on the destination. Please refer to our shipping policy for detailed information.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How can I contact customer service?</button>
+                <div class="faq-answer">
+                    <p>Our customer service team can be reached via email at support@youandme.com, by phone at 1-800-123-4567, or through our online chat service. Our team is available 24/7 to help with any questions or concerns you may have.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<&- include('partials/footer')&>
-<script>
-    document.querySelectorAll('.faq-question').forEach(item => {
+<footer>
+        <div class="footer">
+            <div class="container_1">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download app for android and ios mobile phone</p>
+                        <div class="app-logo">
+                            <img src="../images/play-store.png" alt="This is Play Store logo">
+                            <img src="../images/app-store.png" alt="This is App Store logo">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="../images/Homepagelogo.png" alt="This is Homepage logo">
+                        <p>Purpose</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Usefull Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Posts</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us On</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2024 - Group</p>
+            </div>
+</footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
     item.addEventListener('click', () => {
         const answer = item.nextElementSibling;
         if (answer.style.display === 'block') {
@@ -62,6 +154,6 @@
         }
     });
 });
-</script>
+    </script>
 </body>
 </html>
