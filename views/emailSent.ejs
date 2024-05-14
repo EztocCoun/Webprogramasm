@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent</title>
+    <link rel="stylesheet" href="/css/auth.css"> 
+</head>
+<body>
+    <main>
+        <div class="auth-container">
+            <h1>Email Sent</h1>
+            <p>A password reset link has been sent to <%= email %>.</p>
+            <button id="show-email-btn">Show Email Content</button>
+        </div>
+    </main>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close-btn" id="close-overlay">&times;</span>
+            <h2>Email Content:</h2>
+            <div class="email-content">
+                <%- emailMessage %> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const showEmailBtn = document.getElementById("show-email-btn");
+            const overlay = document.getElementById("overlay");
+            const closeOverlayBtn = document.getElementById("close-overlay");
+
+            showEmailBtn.addEventListener("click", () => {
+                overlay.style.display = "flex";
+            });
+
+            closeOverlayBtn.addEventListener("click", () => {
+                overlay.style.display = "none";
+            });
+
+            window.addEventListener("click", (event) => {
+                if (event.target === overlay) {
+                    overlay.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
