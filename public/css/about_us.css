@@ -6,7 +6,6 @@ Resetting default styles for all elements
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 /* Defining root variables for color scheme */
 :root {
     --primary-color: white;
@@ -104,24 +103,8 @@ main{
     margin: 50px 85px;
     padding: 90px;
     border: 1px solid rgb(145, 145, 145);
-    background: radial-gradient(white, rgb(226, 226, 226));
+    background: radial-gradient(white, rgb(190, 211, 216));
     border-radius: 20px;
-}
-
-.member_inner>div{
-    font-weight: unset;
-    font-family: 'Times New Roman', Times, serif;
-}
-.member_inner p{
-    margin-top: 10px;
-}
-
-.member_inner h2{
-    text-align: center;
-}
-
-.member_inner span{
-    text-align: center;
 }
 
 /* Styling for member images */
@@ -159,7 +142,7 @@ main{
 .board_footer button {
     position: absolute;
     bottom: 20px;
-    right: -84px;
+    right: 16px;
     border: 1px solid black;
     background: var(--primary-color);
     color: black;
@@ -182,10 +165,9 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board,
-.An_board {
+.Thinh_board {
     position: absolute;
-    left: 100px;
+    left: 0;
     width: 800px;
     height: 700px;
     background: white;
@@ -196,9 +178,9 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board,
-.An_board {
+.Thinh_board {
     border: 5px solid rgb(137, 137, 137);
+    text-align: center;
     display: none;
     border-radius: 20px;
 }
@@ -223,8 +205,7 @@ main{
 .Nhan,
 .Duy,
 .Khang,
-.Thinh,
-.An {
+.Thinh {
     display: flex;
     margin-top: 20px;
 }
@@ -233,8 +214,7 @@ main{
 .Nhan h2,
 .Duy h2,
 .Khang h2,
-.Thinh h2,
-.An h2 {
+.Thinh h2 {
     margin-bottom: 10px;
     text-decoration: underline;
 }
@@ -274,7 +254,7 @@ main{
     .member_inner div {
         width: 500px;
         height: 400px;
-        top: 10%;
+        top: 20%;
         left: 0;
         max-width: 840px;
     }

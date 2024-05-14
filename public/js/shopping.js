@@ -2,7 +2,6 @@ let products = [];
 let cart = [];
 
 //* selectors
-
 const selectors = {
   products: document.querySelector(".products"),
   cartBtn: document.querySelector(".cart-btn"),
@@ -13,10 +12,11 @@ const selectors = {
   cartClear: document.querySelector(".cart-clear"),
   cartBody: document.querySelector(".cart-body"),
   cartTotal: document.querySelector(".cart-total"),
+  searchForm: document.querySelector("#search-form"),
+  searchInput: document.querySelector("#search-query")
 };
 
 //* event listeners
-
 const setupListeners = () => {
   document.addEventListener("DOMContentLoaded", initStore);
 
@@ -29,15 +29,26 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.cartClear.addEventListener("click", clearCart);
+
+  // search event
+  selectors.searchForm.addEventListener("submit", handleSearch);
 };
 
 //* event handlers
-
 const initStore = () => {
   loadCart();
   loadProducts("https://fakestoreapi.com/products")
-    .then(renderProducts)
+    .then(() => renderProducts(products))
     .finally(renderCart);
+};
+
+const handleSearch = (e) => {
+  e.preventDefault(); // Prevent default form submission
+  const query = selectors.searchInput.value.trim().toLowerCase();
+  const filteredProducts = products.filter(product => 
+    product.title.toLowerCase().includes(query)
+  );
+  renderProducts(filteredProducts);
 };
 
 const showCart = () => {
@@ -54,7 +65,7 @@ const clearCart = () => {
   cart = [];
   saveCart();
   renderCart();
-  renderProducts();
+  renderProducts(products);
   setTimeout(hideCart, 500);
 };
 
@@ -70,7 +81,7 @@ const addToCart = (e) => {
 
     cart.push({ id, qty: 1 });
     saveCart();
-    renderProducts();
+    renderProducts(products);
     renderCart();
     showCart();
   }
@@ -79,10 +90,9 @@ const addToCart = (e) => {
 const removeFromCart = (id) => {
   cart = cart.filter((x) => x.id !== id);
 
-  // if the last item is remove, close the cart
   cart.length === 0 && setTimeout(hideCart, 500);
 
-  renderProducts();
+  renderProducts(products);
 };
 
 const increaseQty = (id) => {
@@ -124,9 +134,7 @@ const loadCart = () => {
 };
 
 //* render functions
-
 const renderCart = () => {
-  // show cart qty in navbar
   const cartQty = cart.reduce((sum, item) => {
     return sum + item.qty;
   }, 0);
@@ -134,20 +142,16 @@ const renderCart = () => {
   selectors.cartQty.textContent = cartQty;
   selectors.cartQty.classList.toggle("visible", cartQty);
 
-  // show cart total
   selectors.cartTotal.textContent = calculateTotal().format();
 
-  // show empty cart
   if (cart.length === 0) {
     selectors.cartBody.innerHTML =
       '<div class="cart-empty">Your cart is empty.</div>';
     return;
   }
 
-  // show cart items
   selectors.cartBody.innerHTML = cart
     .map(({ id, qty }) => {
-      // get product info of each cart item
       const product = products.find((x) => x.id === id);
 
       const { title, image, price } = product;
@@ -175,18 +179,15 @@ const renderCart = () => {
     .join("");
 };
 
-const renderProducts = () => {
-  selectors.products.innerHTML = products
+const renderProducts = (productList) => {
+  selectors.products.innerHTML = productList
     .map((product) => {
       const { id, title, image, price } = product;
 
-      // check if product is already in cart
       const inCart = cart.find((x) => x.id === id);
 
-      // make the add to cart button disabled if already in cart
       const disabled = inCart ? "disabled" : "";
 
-      // change the text if already in cart
       const text = inCart ? "Added in Cart" : "Add to Cart";
 
       return `
@@ -202,7 +203,6 @@ const renderProducts = () => {
 };
 
 //* api functions
-
 const loadProducts = async (apiURL) => {
   try {
     const response = await fetch(apiURL);
@@ -217,7 +217,6 @@ const loadProducts = async (apiURL) => {
 };
 
 //* helper functions
-
 const calculateTotal = () => {
   return cart
     .map(({ id, qty }) => {
@@ -238,5 +237,4 @@ Number.prototype.format = function () {
 };
 
 //* initialize
-
 setupListeners();
