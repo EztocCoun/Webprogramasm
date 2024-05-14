@@ -6,6 +6,7 @@ Resetting default styles for all elements
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 /* Defining root variables for color scheme */
 :root {
     --primary-color: white;
@@ -103,8 +104,24 @@ main{
     margin: 50px 85px;
     padding: 90px;
     border: 1px solid rgb(145, 145, 145);
-    background: radial-gradient(white, rgb(190, 211, 216));
+    background: radial-gradient(white, rgb(226, 226, 226));
     border-radius: 20px;
+}
+
+.member_inner>div{
+    font-weight: unset;
+    font-family: 'Times New Roman', Times, serif;
+}
+.member_inner p{
+    margin-top: 10px;
+}
+
+.member_inner h2{
+    text-align: center;
+}
+
+.member_inner span{
+    text-align: center;
 }
 
 /* Styling for member images */
@@ -182,7 +199,6 @@ main{
 .Thinh_board,
 .An_board {
     border: 5px solid rgb(137, 137, 137);
-    text-align: center;
     display: none;
     border-radius: 20px;
 }
