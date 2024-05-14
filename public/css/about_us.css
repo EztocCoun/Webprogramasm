@@ -142,7 +142,7 @@ main{
 .board_footer button {
     position: absolute;
     bottom: 20px;
-    right: 16px;
+    right: -84px;
     border: 1px solid black;
     background: var(--primary-color);
     color: black;
@@ -165,9 +165,10 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board {
+.Thinh_board,
+.An_board {
     position: absolute;
-    left: 0;
+    left: 100px;
     width: 800px;
     height: 700px;
     background: white;
@@ -178,7 +179,8 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board {
+.Thinh_board,
+.An_board {
     border: 5px solid rgb(137, 137, 137);
     text-align: center;
     display: none;
@@ -205,7 +207,8 @@ main{
 .Nhan,
 .Duy,
 .Khang,
-.Thinh {
+.Thinh,
+.An {
     display: flex;
     margin-top: 20px;
 }
@@ -214,7 +217,8 @@ main{
 .Nhan h2,
 .Duy h2,
 .Khang h2,
-.Thinh h2 {
+.Thinh h2,
+.An h2 {
     margin-bottom: 10px;
     text-decoration: underline;
 }
@@ -254,7 +258,7 @@ main{
     .member_inner div {
         width: 500px;
         height: 400px;
-        top: 20%;
+        top: 10%;
         left: 0;
         max-width: 840px;
     }
