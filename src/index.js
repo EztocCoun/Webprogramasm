@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const collection = require("./config");
 const bcrypt = require('bcrypt');
+const crypto = require('crypto'); // For generating a random reset token
 
 const app = express();
 // convert data into json format
@@ -9,9 +10,15 @@ app.use(express.json());
 // Static file
 app.use(express.static("public"));
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static(path.join(__dirname, '../public')));
+
 //use EJS as the view engine
 app.set("view engine", "ejs");
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views'));
 
 app.get("/", (req, res) => {
     res.render("login");
@@ -109,6 +116,34 @@ app.post("/login", async (req, res) => {
     }
 });
 
+// Route to render the forgot password page
+app.get('/forgot-password', (req, res) => {
+    res.render('forgotPassword');
+});
+
+// Route to handle the forgot password form submission
+app.post('/forgot-password', (req, res) => {
+    const { email } = req.body;
+    const resetToken = crypto.randomBytes(32).toString('hex');
+    const resetLink = `http://localhost:5000/reset-password?token=${resetToken}&email=${encodeURIComponent(email)}`;
+    
+    // Simulate the email content
+    const emailMessage = `
+        <p>Dear User,</p>
+        <p>You requested to reset your password. Please click the link below to reset your password:</p>
+        <a style="color: orange;" href="${resetLink}">Reset Password</a>
+        <p>If you did not request a password reset, please ignore this email.</p>
+        <p>Thank you,<br>The Mall Team</p>
+    `;
+    
+    // Display the email message
+    res.render('emailSent', { email, emailMessage });
+});
+
+// Error handling middleware...
+app.use((err, req, res, next) => {
+    res.status(500).send('Something went wrong!');
+});
 
 // Define Port for Application
 const port = 5000;
