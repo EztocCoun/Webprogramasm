@@ -1,32 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
-    <link rel="stylesheet" href="/css/copyright.css">
-</head>
+<link rel="stylesheet" href="/css/faq.css">
 <body>
-    <header>
-        <h1>Help Center</h1>
-    </header>
+    <%- include('partials/header')%>
+    <%- include('partials/nav')%>
 
-    <div class="main-container">
-        <aside class="sidebar">
-            <ul class="menu">
-                <li><a href="../copyright">Legal Information</a></li>
-                <li><a href="../fees">Fees</a></li>
-                <li><a href="../contact">Contact</a></li>
-                <li><a href="../about_us">About Us</a></li>
-                <li style="background-color: grey;"><strong></strong><a href="../home">Home</a></strong></li>
-            </ul>
-        </aside>
-    
-        <div class="content">
-            =    <ul class="terms-list">
-    
-            </ul>
-        </div>
+
         <div class="faq-container">
             <h1>Frequently Asked Questions</h1>
 
@@ -104,43 +81,7 @@
         </div>
     </div>
 <footer>
-        <div class="footer">
-            <div class="container_1">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download our App</h3>
-                        <p>Download app for android and ios mobile phone</p>
-                        <div class="app-logo">
-                            <img src="../images/play-store.png" alt="This is Play Store logo">
-                            <img src="../images/app-store.png" alt="This is App Store logo">
-                        </div>
-                    </div>
-                    <div class="footer-col-2">
-                        <img src="../images/Homepagelogo.png" alt="This is Homepage logo">
-                        <p>Purpose</p>
-                    </div>
-                    <div class="footer-col-3">
-                        <h3>Usefull Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Posts</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow Us On</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Instagram</li>
-                            <li>Twitter</li>
-                            <li>Youtube</li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copyright">Copyright 2024 - Group</p>
-            </div>
+    <%- include('partials/footer') %>
 </footer>
 
     <script>
