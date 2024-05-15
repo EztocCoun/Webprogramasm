@@ -1,58 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="my_account.css".css>
-    <title>shop.vn/user/account/profile</title>
-</head>
+<link rel="stylesheet" href="/css/main.css">
+
+<%- include('partials/header') %> 
 <body>
-  <h1>My Account</h1>
-  <form id="account-form">
-
-    <div>
-        <label for="username">User Name:</label>
-        <input type="text" id="username" name="username" maxlength="50">
-    </div><br>
-
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" maxlength="50">
-    </div><br>
-
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div><br>
-
-    <div>
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]*" required>
-    </div><br>
-
-    <div>
-        <label for="sexuality">Sexuality:</label>
-        <input type="radio" value="sex-1" name="sex" id="male"/>Male
-        <input type="radio" value="sex-2" name="sex" id="female"/>Female
-        <input type="radio" value="sex-3" name="sex" id="others"/>Others
-    </div><br>
-
-    <div>
-        <label for="dob-day">Date of Birth:</label>
-
-        <label for="day">Day:</label>
-        <select name="day" id="day"></select>
-
-        <label for="month">Month:</label>
-        <select name="month" id="month"></select>
-
-        <label for="year">Year:</label>
-        <select name="year" id="year"></select>
-    </div><br>
-
-    <button type="submit">Save</button>
-    </form>
-
-    <script src="my_account.js"></script>
+<%- include('partials/nav') %>
+  <main>
+    <div class="profile-container">
+        <h1>My Account</h1>
+        <p><strong>Profile Picture:</strong><br>
+          <img src="<%= user.profilePicture %>" alt="Profile Picture" width="100" height="100">
+        </p>
+        <p><strong>Full Name:</strong> <%= user.firstName %> <%= user.lastName %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Phone Number:</strong> <%= user.phone %></p>
+        <p><strong>Address:</strong> <%= user.address %>, <%= user.city %>, <%= user.zipcode %>, <%= user.country %></p>
+        <% if (user.accountType === 'storeOwner') { %>
+            <p><strong>Business Name:</strong> <%= user.businessName %></p>
+            <p><strong>Store Name:</strong> <%= user.storeName %></p>
+            <p><strong>Store Category:</strong> <%= user.storeCategory %></p>
+        <% } %>
+        <form action="/logout" method="get">
+            <button type="submit" class="btn">Logout</button>
+        </form>
+    </div>
+  </main>
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
 </body>
 </html>
