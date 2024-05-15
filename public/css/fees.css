@@ -45,10 +45,11 @@ footer {
 }
 
 .contact-message a {
-    color: #007BFF; 
+    color: #007BFF;
     text-decoration: none;
+    display: inline-block; 
 }
 
 .contact-message a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
