@@ -154,6 +154,7 @@ p{
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
+    display: block;
     position: relative;
 }
 
@@ -485,10 +486,7 @@ form a{
     transition: transform 1s ease;
 }
 
-.secondary-nav{
-    display: flex;
-    flex-direction: column;
-}
+
 @media only screen and (max-width: 800px){
 
     nav ul{

@@ -44,9 +44,9 @@
 
   "dependencies": {
 
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^5.1.1",
 
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
 
     "express": "^4.19.2",
 
@@ -54,9 +54,11 @@
 
     "express.js": "^1.0.0",
 
-    "mongoose": "^7.4.1",
+    "mongoose": "^7.6.11",
 
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+
+    "nodemon": "^3.1.0"
 
   }
 

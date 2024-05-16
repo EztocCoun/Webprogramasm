@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const crypto = require('crypto'); // For generating a random reset token
 const multer = require('multer'); // For handling file uploads
 const session = require('express-session'); // For managing user sessions

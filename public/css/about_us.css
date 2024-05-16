@@ -151,8 +151,8 @@ main{
     position: relative;
     width: 800px;
     height: 700px;
-    top: 8%;
-    left: 25%;
+    top: 25%;
+    left: 35%;
     z-index: 1;
 }
 
