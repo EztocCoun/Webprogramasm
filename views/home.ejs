@@ -1,32 +1,14 @@
-<link rel="stylesheet" href="/css/home_page.css">
 <link rel="stylesheet" href="/css/main.css">
 
 
         <body>
             <div class="header">
                 <div class="container">
-                    <div class="navbar">
-                        <div class="logo">
-                            <a href="/views/home_page.ejs"><img src="/images/Homepagelogo.png" alt="logo"
-                                    width="125px"></a>
-                        </div>
-                        <nav>
-                            <ul id="MenuItems">
-                                <li><a href="/home">Home</a></li>
-                                <li><a href="/about_us">About</a></li>
-                                <li><a href="/copy">FaQs</a></li>
-                                <li><a href="/contact">Account</a></li>
-                            </ul>
-                        </nav>
-                        <div class="cart">
-                            <a href="/shopping"><img src="/images/cart.png" width="30px" height="30px"> <p>Shopping Page</p></a>
-                        </div>
-                        <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()">
-                    </div>
+                        <%- include('partials/nav') %>                       
                     <div class="row">
                         <div class="col-2">
                             <h1>Buy anything you want<br>From our shop</h1>
-                            <p>a brand new shop which is created by Group</p>
+                            <p>A brand new shop which is created by Group 6</p>
                             <a href="" class="btn">Buy Now &#8594</a>
                         </div>
                         <div class="col-2">

@@ -3,33 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
+    <title>Register</title>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
+    <main>
+        <div class="container">
+            <h1>Register Account</h1>
+            <form action="/signup" method="post" enctype="multipart/form-data" class="form-box">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Retype Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture:</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zipcode:</label>
+                    <input type="text" id="zipcode" name="zipcode" pattern="\d{4,6}" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="VN">Viet Nam</option>
+                        <option value="CA">Canada</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Account Type:</label>
+                    <input type="radio" id="shopper" name="accountType" value="shopper" checked>
+                    <label for="shopper">Shopper</label>
+                    <input type="radio" id="storeOwner" name="accountType" value="storeOwner">
+                    <label for="storeOwner">Store Owner</label>
+                </div>
+                <div id="storeDetails" class="form-group" style="display: none;">
+                    <div class="form-group">
+                        <label for="businessName">Business Name:</label>
+                        <input type="text" id="businessName" name="businessName">
+                    </div>
+                    <div class="form-group">
+                        <label for="storeName">Store Name:</label>
+                        <input type="text" id="storeName" name="storeName">
+                    </div>
+                    <div class="form-group">
+                        <label for="storeCategory">Store Category:</label>
+                        <select id="storeCategory" name="storeCategory">
+                            <option value="">Select store category</option>
+                            <option value="Technology stores">Technology stores</option>
+                            <option value="Pet stores">Pet stores</option>
+                            <option value="Toy stores">Toy stores</option>
+                            <option value="Grocery stores">Grocery stores</option>
+                            <option value="Restaurants">Restaurants</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                
+                
+                <div class="addition">
+                <p>Check out our website?
+                    <a class="link" href="/home">Guest User</a></p>
+                    <h5>Already have account? <a href="/login">Click Here</a></h5>
 
-    <div class="form-container">
-        <h2>Sign Up</h2>
-        <form action="/signup" method="post">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-          </div>
-          <label for="select">Select your role</label>
-          <select class="form-group">
-            <p>select your role</p>
-            <option></option>
-            <option id="vendor">Vendor</option>
-            <option id="customer">Customer</option>
-            <option id="shipper">Shipper</option>
-        </select>
-          <button type="submit" class="submit-btn">Register</button>
-        </form>
-        <p>Already have an account? <a class="link" href="/login">Login</a></p>
-      </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storeOwnerRadio = document.getElementById('storeOwner');
+            const storeDetails = document.getElementById('storeDetails');
+
+            storeOwnerRadio.addEventListener('change', () => {
+                storeDetails.style.display = 'block';
+            });
+
+            document.getElementById('shopper').addEventListener('change', () => {
+                storeDetails.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>

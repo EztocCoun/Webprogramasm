@@ -13,26 +13,20 @@
         <h2>Login</h2>
         <form action="/login" method="post">
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
+            <label for="name">Email:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your email" required autocomplete="off">
           </div>
           <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Password" required>
           </div>
-          <label for="select">Select your role</label>
-          <select class="form-group">
-            <p>select your role</p>
-            <option ></option>
-            <option name="vendor" id="vendor">Vendor</option>
-            <option name="customer" id="customer">Customer</option>
-            <option name="shipper" id="shipper">Shipper</option>
-        </select>
           <button type="submit" class="submit-btn">Login</button>
         </form>
         <p>Don't have an account? 
-        <a class="link" href="/signup">    SignUp</a></p>
+        <a class="link" href="/signup">SignUp</a></p>
         <a class="link" href="/forgot-password">Forgot Password?</a>
+        <p>Check out our website?
+        <a class="link" href="/home">Guest User</a></p>
       </div>
     
 </body>

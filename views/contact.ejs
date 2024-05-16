@@ -5,7 +5,7 @@
 
     <%- include('partials/nav') %>
     <!-- FORM -->
-    <form id="contactForm">
+    <form id="contactForm" method="post">
 
         <label for="user">Do you need help as a vendor or client?</label>
         <select id="user" name="user">
@@ -35,6 +35,22 @@
             <label><input type="radio" name="contactMethod" value="email" required>Email</label>
             <label><input type="radio" name="contactMethod" value="phone">Phone</label>
         </fieldset>
+
+        <label>Contact Day(s)</label>
+        <label for="contact_day_mon">Monday</label>
+        <input type="checkbox" value="Mon" name="contact_day[]" id="contact_day_mon">
+        <label for="contact_day_tue">Tuesday</label>
+        <input type="checkbox" value="Tue" name="contact_day[]" id="contact_day_tue">
+        <label for="contact_day_wed">Wednesday</label>
+        <input type="checkbox" value="Wed" name="contact_day[]" id="contact_day_wed">
+        <label for="contact_day_thu">Thursday</label>
+        <input type="checkbox" value="Thu" name="contact_day[]" id="contact_day_thu">
+        <label for="contact_day_fri">Friday</label>
+        <input type="checkbox" value="Fri" name="contact_day[]" id="contact_day_fri">
+        <label for="contact_day_sat">Saturday</label>
+        <input type="checkbox" value="Sat" name="contact_day[]" id="contact_day_sat">
+        <label for="contact_day_sun">Sunday</label>
+        <input type="checkbox" value="Sun" name="contact_day[]" id="contact_day_sun" required>
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" required minlength="50" maxlength="500"

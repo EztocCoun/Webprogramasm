@@ -154,7 +154,7 @@ p{
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
-    display: block;
+    position: relative;
 }
 
 .footer p{
@@ -201,6 +201,36 @@ p{
 .copyright{
     text-align: center;
 }
+
+.secondary-nav {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;
+    margin-bottom: 40px; 
+}
+
+.secondary-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.secondary-nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.secondary-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.secondary-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 
 
 /* end of footer */
@@ -455,7 +485,10 @@ form a{
     transition: transform 1s ease;
 }
 
-
+.secondary-nav{
+    display: flex;
+    flex-direction: column;
+}
 @media only screen and (max-width: 800px){
 
     nav ul{
@@ -749,6 +782,59 @@ form a{
     background-color: #044285; 
 }
 
+/* Profile container styling */
+.profile-container {
+    max-width: 600px; 
+    margin: 50px auto; 
+    padding: 30px; 
+    background-color: #fff;
+    border-radius: 10px; 
+    border: 2px solid #ccc; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.profile-container h1 {
+    margin-bottom: 25px; 
+    font-size: 26px; 
+    text-align: center;
+    color: #333;
+}
+
+.profile-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-container img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-container strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-container .btn {
+    padding: 12px; 
+    border: none;
+    border-radius: 6px; 
+    background-color: orange;
+    color: white;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.profile-container .btn:hover {
+    background-color: rgb(177, 119, 11);
+}
+
+  
 @media only screen and (max-width: 800px){
     .row{
         text-align: center;
@@ -770,3 +856,4 @@ form a{
         display: none;
     }
 }
+

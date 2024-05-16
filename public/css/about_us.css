@@ -103,9 +103,26 @@ main{
     margin: 50px 85px;
     padding: 90px;
     border: 1px solid rgb(145, 145, 145);
-    background: radial-gradient(white, rgb(190, 211, 216));
+    background: radial-gradient(white, rgb(226, 226, 226));
     border-radius: 20px;
 }
+
+.member_inner>div{
+    font-weight: unset;
+    font-family: 'Times New Roman', Times, serif;
+}
+.member_inner p{
+    margin-top: 10px;
+}
+
+.member_inner h2{
+    text-align: center;
+}
+
+.member_inner span{
+    text-align: center;
+}
+
 
 /* Styling for member images */
 .member img {
@@ -134,8 +151,9 @@ main{
     position: relative;
     width: 800px;
     height: 700px;
-    top: 20%;
-    left: 30%;
+    top: 8%;
+    left: 25%;
+    z-index: 1;
 }
 
 /* Styling for the close button in the footer of the member board */
@@ -165,7 +183,8 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board {
+.Thinh_board, 
+.An_board {
     position: absolute;
     left: 0;
     width: 800px;
@@ -178,7 +197,8 @@ main{
 .Nhan_board,
 .Duy_board,
 .Khang_board,
-.Thinh_board {
+.Thinh_board,
+.An_board {
     border: 5px solid rgb(137, 137, 137);
     text-align: center;
     display: none;
@@ -205,7 +225,8 @@ main{
 .Nhan,
 .Duy,
 .Khang,
-.Thinh {
+.Thinh,
+.An {
     display: flex;
     margin-top: 20px;
 }
@@ -214,7 +235,8 @@ main{
 .Nhan h2,
 .Duy h2,
 .Khang h2,
-.Thinh h2 {
+.Thinh h2,
+.An h2 {
     margin-bottom: 10px;
     text-decoration: underline;
 }
@@ -251,10 +273,11 @@ main{
         max-width: 840px;
     }
 
-    .member_inner div {
+    .member_inner>div {
+        position: absolute;
         width: 500px;
         height: 400px;
-        top: 20%;
+        top: 0;
         left: 0;
         max-width: 840px;
     }
