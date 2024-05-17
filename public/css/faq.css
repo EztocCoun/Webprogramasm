@@ -1,0 +1,83 @@
+/*  Rmit University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2024A
+Author: Nhan, Thinh, Duy, Khang, An
+ID: s3975356,s3992133, s3986546, s3979209, s4012479*/
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    width: 85%;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    padding-bottom: 80px; /* Add padding to avoid overlap with the footer */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgb(177, 119, 11);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #555;
+}

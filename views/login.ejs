@@ -1,0 +1,39 @@
+<!-- Rmit University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2024A
+Author: Nhan, Thinh, Duy, Khang, An
+ID: s3975356,s3992133, s3986546, s3979209, s4012479   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="name">Email:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your email" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p>Don't have an account? 
+        <a class="link" href="/signup">SignUp</a></p>
+        <a class="link" href="/forgot-password">Forgot Password?</a>
+        <p>Check out our website?
+        <a class="link" href="/home">Guest User</a></p>
+      </div>
+    
+</body>
+</html>

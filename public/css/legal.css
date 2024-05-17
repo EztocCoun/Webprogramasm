@@ -1,0 +1,42 @@
+/*  Rmit University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2024A
+Author: Nhan, Thinh, Duy, Khang, An
+ID: s3975356,s3992133, s3986546, s3979209, s4012479*/
+
+
+.nav-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: #FF7043;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Section title styling */
+h2 {
+    font-size: 1.5em;
+    color: #FF7043;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1em;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+

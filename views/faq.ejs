@@ -1,0 +1,106 @@
+<!-- Rmit University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2024A
+Author: Nhan, Thinh, Duy, Khang, An
+ID: s3975356,s3992133, s3986546, s3979209, s4012479   -->
+
+<link rel="stylesheet" href="/css/faq.css">
+<body>
+    <%- include('partials/header')%>
+    <%- include('partials/nav')%>
+
+
+        <div class="faq-container">
+            <h1>Frequently Asked Questions</h1>
+
+            <div class="faq">
+                <button class="faq-question">What is your return policy?</button>
+                <div class="faq-answer">
+                    <p>We accept returns within 30 days of purchase. Please ensure that the product is in its original condition and packaging.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">How do I create an account on your mall?</button>
+                <div class="faq-answer">
+                    <p>To create an account, click on the 'Register' button at the top of the homepage. 
+                        Fill in the required fields in the form, including your email address, a password, and any other necessary information. After submitting the form, you'll receive a confirmation email. Follow the instructions in the email to complete your registration.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">Can I return or exchange an item I purchased?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can return or exchange items within 30 days of receipt. Items must be in their original condition and packaging.
+                         To initiate a return or exchange, please visit your account dashboard and select the order that contains the items you wish to return or exchange.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">What payment methods do you accept?</button>
+                <div class="faq-answer">
+                    <p>We accept a variety of payment methods including credit cards (Visa, MasterCard, American Express), PayPal, and online bank transfers. Specific options may vary depending on your location.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How can I track my order?</button>
+                <div class="faq-answer">
+                    <p>Once your order has shipped, you will receive a confirmation email that includes a tracking number. You can use this number on our website's tracking page to check the status of your delivery at any time.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">How do I apply a promo code to my order?</button>
+                <div class="faq-answer">
+                    <p>You can enter your promo code at checkout. There will be a box labeled "Promo Code" where you can enter the code before finalizing your purchase. Be sure to apply the promo code before completing your payment to benefit from the promotion.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">What should I do if I forgot my password?</button>
+                <div class="faq-answer">
+                    <p>If you've forgotten your password, click on the 'Forgot Password' link on the login page. Enter your email address, and we'll send you instructions to reset your password.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How do I update my shipping or billing address?</button>
+                <div class="faq-answer">
+                    <p>You can update your shipping or billing address by going to your account settings. Click on 'Addresses' and you will be able to edit or add new addresses.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">Do you ship internationally?</button>
+                <div class="faq-answer">
+                    <p>Yes, we offer international shipping. Shipping costs and times vary depending on the destination. Please refer to our shipping policy for detailed information.</p>
+                </div>
+            </div>
+    
+            <div class="faq">
+                <button class="faq-question">How can I contact customer service?</button>
+                <div class="faq-answer">
+                    <p>Our customer service team can be reached via email at support@youandme.com, by phone at 1-800-123-4567, or through our online chat service. Our team is available 24/7 to help with any questions or concerns you may have.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer>
+    <%- include('partials/footer') %>
+</footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    });
+});
+    </script>
+</body>
+</html>

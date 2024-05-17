@@ -1,0 +1,76 @@
+<!-- Rmit University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2024A
+Author: Nhan, Thinh, Duy, Khang, An
+ID: s3975356,s3992133, s3986546, s3979209, s4012479   -->
+
+
+
+<link rel="stylesheet" href="/css/contact.css">
+
+    <%- include('partials/header') %> 
+<body>
+
+    <%- include('partials/nav') %>
+    <!-- FORM -->
+    <form id="contactForm" method="post">
+
+        <label for="user">Do you need help as a vendor or client?</label>
+        <select id="user" name="user">
+            <option value="client">Client (shopper)</option>
+            <option value="vendor">Vendor (shop owner)</option>
+        </select>
+
+        <label for="purpose">Contact Purpose:</label>
+        <select id="purpose" name="purpose">
+            <option value="query">General Query</option>
+            <option value="feedback">Feedback</option>
+            <option value="complaint">Complaint</option>
+        </select>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="2" placeholder="Type your full name here">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Type your personal email here">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" required
+            placeholder="Type your personal phone number here">
+
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+            <label><input type="radio" name="contactMethod" value="email" required>Email</label>
+            <label><input type="radio" name="contactMethod" value="phone">Phone</label>
+        </fieldset>
+
+        <label>Contact Day(s)</label>
+        <label for="contact_day_mon">Monday</label>
+        <input type="checkbox" value="Mon" name="contact_day[]" id="contact_day_mon">
+        <label for="contact_day_tue">Tuesday</label>
+        <input type="checkbox" value="Tue" name="contact_day[]" id="contact_day_tue">
+        <label for="contact_day_wed">Wednesday</label>
+        <input type="checkbox" value="Wed" name="contact_day[]" id="contact_day_wed">
+        <label for="contact_day_thu">Thursday</label>
+        <input type="checkbox" value="Thu" name="contact_day[]" id="contact_day_thu">
+        <label for="contact_day_fri">Friday</label>
+        <input type="checkbox" value="Fri" name="contact_day[]" id="contact_day_fri">
+        <label for="contact_day_sat">Saturday</label>
+        <input type="checkbox" value="Sat" name="contact_day[]" id="contact_day_sat">
+        <label for="contact_day_sun">Sunday</label>
+        <input type="checkbox" value="Sun" name="contact_day[]" id="contact_day_sun" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="50" maxlength="500"
+            placeholder="Type your request"></textarea>
+
+        <button type="reset">Clear</button>
+        <button type="submit">Send</button>
+    </form>
+
+    <footer>
+        <%- include('partials/footer')%>
+    </footer>
+</body>
+
+</html>
